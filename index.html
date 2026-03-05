@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty of Nature — World-Class Immersive Experience</title>
+    <meta name="description" content="Explore many of the world’s most beautiful places and flowers in a cinematic immersive website." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=2400&q=80" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="petals" aria-hidden="true"></div>
+
+    <header class="hero" id="top">
+      <nav class="glass nav" aria-label="Primary navigation">
+        <a class="logo" href="#top">Beauty of Nature</a>
+        <div class="nav-links">
+          <a href="#explore">Explore</a>
+          <a href="#places">Places</a>
+          <a href="#flowers">Flowers</a>
+          <a href="#wonders">Wonders</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+      </nav>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">A world-class visual journey</p>
+        <h1>Beauty of Nature</h1>
+        <p>Discover breathtaking landscapes and exquisite flowers from around the world through elegant motion, cinematic layouts, and soothing interactions.</p>
+        <a class="cta" href="#explore">Begin Exploring</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section controls" id="explore">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Personalize your journey</p>
+          <h2>Explore by Region & Mood</h2>
+        </div>
+        <div class="controls-panel glass reveal">
+          <div class="filter-group" role="group" aria-label="Filter beautiful places by category">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="mountain">Mountains</button>
+            <button type="button" class="filter-btn" data-filter="lake">Lakes</button>
+            <button type="button" class="filter-btn" data-filter="waterfall">Waterfalls</button>
+            <button type="button" class="filter-btn" data-filter="coast">Coasts</button>
+            <button type="button" class="filter-btn" data-filter="forest">Forests</button>
+          </div>
+          <div class="quote-box" aria-live="polite">
+            <p id="natureQuote">“In every walk with nature, one receives far more than they seek.”</p>
+            <button type="button" id="newQuote" class="ghost-btn">New Nature Quote</button>
+          </div>
+          <div class="weather-panel" id="weatherPanel" aria-live="polite">
+            <p class="weather-title">Live Weather for Selected Place</p>
+            <p id="weatherPlace">Select any place card below to load live weather.</p>
+            <p id="weatherNow">Temperature: -- | Wind: -- | Condition: --</p>
+            <p class="weather-note">Data source: Open-Meteo (open-source weather API)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="places">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Beautiful Places</p>
+          <h2>Many World Wonders in One Journey</h2>
+        </div>
+        <div class="card-grid">
+          <article class="nature-card reveal" data-category="mountain" data-place="Swiss Alps, Switzerland" data-lat="46.8182" data-lon="8.2275"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80" alt="Swiss Alps mountains" loading="lazy" /><div class="card-content glass"><h3>Swiss Alps</h3><p>Snow-lit peaks and calm alpine valleys.</p></div></article>
+          <article class="nature-card reveal" data-category="lake" data-place="Lake Louise, Canada" data-lat="51.4254" data-lon="-116.1773"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80" alt="Lake Louise" loading="lazy" /><div class="card-content glass"><h3>Lake Louise</h3><p>Crystal turquoise waters and pines.</p></div></article>
+          <article class="nature-card reveal" data-category="waterfall" data-place="Iguazú Falls, Argentina" data-lat="-25.6953" data-lon="-54.4367"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1400&q=80" alt="Iguazu Falls" loading="lazy" /><div class="card-content glass"><h3>Iguazú Falls</h3><p>Rainforest mist and thundering cascades.</p></div></article>
+          <article class="nature-card reveal" data-category="coast" data-place="Bora Bora, French Polynesia" data-lat="-16.5004" data-lon="-151.7415"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" alt="Bora Bora coast" loading="lazy" /><div class="card-content glass"><h3>Bora Bora</h3><p>Lagoon blues and tropical serenity.</p></div></article>
+          <article class="nature-card reveal" data-category="forest" data-place="Redwood Forest, USA" data-lat="41.2132" data-lon="-124.0046"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80" alt="Redwood forest" loading="lazy" /><div class="card-content glass"><h3>Redwood Forest</h3><p>Ancient giants in emerald light.</p></div></article>
+          <article class="nature-card reveal" data-category="mountain" data-place="Patagonia, Chile" data-lat="-50.9423" data-lon="-73.4068"><img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?auto=format&fit=crop&w=1400&q=80" alt="Patagonia mountains" loading="lazy" /><div class="card-content glass"><h3>Patagonia</h3><p>Wild peaks and dramatic skies.</p></div></article>
+          <article class="nature-card reveal" data-category="lake" data-place="Hallstatt, Austria" data-lat="47.5622" data-lon="13.6493"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=80" alt="Hallstatt lake village" loading="lazy" /><div class="card-content glass"><h3>Hallstatt</h3><p>Fairytale village by still waters.</p></div></article>
+          <article class="nature-card reveal" data-category="forest" data-place="Black Forest, Germany" data-lat="48.0" data-lon="8.2"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=80" alt="Misty forest" loading="lazy" /><div class="card-content glass"><h3>Black Forest</h3><p>Mist-covered woods and sun rays.</p></div></article>
+          <article class="nature-card reveal" data-category="coast" data-place="Maldives" data-lat="3.2028" data-lon="73.2207"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1400&q=80" alt="Maldives beach" loading="lazy" /><div class="card-content glass"><h3>Maldives</h3><p>White sands and endless horizon.</p></div></article>
+          <article class="nature-card reveal" data-category="waterfall" data-place="Seljalandsfoss, Iceland" data-lat="63.6156" data-lon="-19.9917"><img src="https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?auto=format&fit=crop&w=1400&q=80" alt="Seljalandsfoss waterfall" loading="lazy" /><div class="card-content glass"><h3>Seljalandsfoss</h3><p>Water curtain in Icelandic beauty.</p></div></article>
+          <article class="nature-card reveal" data-category="mountain" data-place="Dolomites, Italy" data-lat="46.4102" data-lon="11.844"><img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1400&q=80" alt="Dolomites" loading="lazy" /><div class="card-content glass"><h3>Dolomites</h3><p>Cinematic cliffs and alpine meadows.</p></div></article>
+          <article class="nature-card reveal" data-category="lake" data-place="Moraine Lake, Canada" data-lat="51.3215" data-lon="-116.186"><img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1400&q=80" alt="Moraine lake" loading="lazy" /><div class="card-content glass"><h3>Moraine Lake</h3><p>Iconic glacial colors and mountain reflections.</p></div></article>
+        </div>
+      </section>
+      <section class="section" id="flowers">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Beautiful Flowers Gallery</p>
+          <h2>12 Floral Masterpieces of Nature</h2>
+        </div>
+        <div class="flower-grid many">
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80" alt="Pink flower bloom" loading="lazy" /><figcaption>Pink Blossom</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?auto=format&fit=crop&w=900&q=80" alt="Purple flowers" loading="lazy" /><figcaption>Purple Bloom</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&w=900&q=80" alt="Golden yellow flower" loading="lazy" /><figcaption>Golden Bloom</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=900&q=80" alt="Red flower field" loading="lazy" /><figcaption>Scarlet Petals</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1446071103084-c257b5f70672?auto=format&fit=crop&w=900&q=80" alt="White blossoms" loading="lazy" /><figcaption>White Blossoms</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=900&q=80" alt="Violet flower" loading="lazy" /><figcaption>Violet Bloom</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=900&q=80" alt="Rose petals closeup" loading="lazy" /><figcaption>Rose Garden</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=900&q=80" alt="Blue flowers" loading="lazy" /><figcaption>Blue Petals</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1460036521480-ff49c08c2781?auto=format&fit=crop&w=900&q=80" alt="Pink wildflowers" loading="lazy" /><figcaption>Wildflower Pink</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80" alt="Field of flowers" loading="lazy" /><figcaption>Meadow Bloom</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Orange flower" loading="lazy" /><figcaption>Sunset Petals</figcaption></figure>
+          <figure class="flower-card reveal"><img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=900&q=80" alt="Delicate floral stem" loading="lazy" /><figcaption>Delicate Stem</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section" id="wonders">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Featured Nature Wonders</p>
+          <h2>Cinematic Landscapes in Motion</h2>
+        </div>
+        <div class="wonders-layout">
+          <article class="wonder large reveal parallax" data-speed="0.07"><img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1600&q=80" alt="Aurora" loading="lazy" /><div class="wonder-content glass"><h3>Aurora Skies</h3><p>Green ribbons over snow mountains.</p></div></article>
+          <article class="wonder reveal parallax" data-speed="0.1"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=80" alt="Yosemite" loading="lazy" /><div class="wonder-content glass"><h3>Yosemite Valley</h3><p>Granite cliffs and golden morning air.</p></div></article>
+          <article class="wonder reveal parallax" data-speed="0.09"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80" alt="El Nido" loading="lazy" /><div class="wonder-content glass"><h3>El Nido</h3><p>Limestone coast and tropical lagoons.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Interactive Gallery</p>
+          <h2>Expand Any Moment in Full Screen</h2>
+        </div>
+        <div class="interactive-grid">
+          <button type="button" class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=70" alt="Mountain river" loading="lazy" /></button>
+          <button type="button" class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1800&q=80"><img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1000&q=70" alt="Forest mountains" loading="lazy" /></button>
+          <button type="button" class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=70" alt="Flower macro" loading="lazy" /></button>
+          <button type="button" class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=1800&q=80"><img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=1000&q=70" alt="Flower meadow" loading="lazy" /></button>
+          <button type="button" class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=70" alt="Alpine view" loading="lazy" /></button>
+          <button type="button" class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1800&q=80"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=70" alt="Ocean reef" loading="lazy" /></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section" id="end">
+      <div class="footer-panel glass reveal">
+        <p class="eyebrow">A peaceful ending</p>
+        <h2>Nature is always waiting for your next journey</h2>
+        <p>From mountains and lakes to flowers and coastlines, this world-class experience is built to stay immersive and bug-free across devices.</p>
+        <a class="cta" href="#top">Return to the top</a>
+      </div>
+    </footer>
+
+    <button type="button" class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded nature image">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+      <img id="lightboxImage" src="" alt="Expanded gallery image" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
